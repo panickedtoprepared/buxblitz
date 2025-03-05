@@ -1,0 +1,287 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #16213e; /* Dark background, matching Roblox themes */
+    color: #d6e945;
+    line-height: 1.2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+}
+
+/* Splash Container */
+.splash-container {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0f3460, #e94560); /* Gradient matching Roblox colors */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8); /* Neon glow */
+    max-width: 800px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+/* Content Styling */
+.content {
+    padding: 20px 15px; /* Reduced padding for mobile */
+}
+
+.logo {
+    font-size: 48px;
+    color: #ff007a; /* Bright pink for BuxBlitz logo */
+    text-shadow: 0 0 15px #ff007a; /* Neon glow */
+    font-family: 'Silkscreen'; /* Use Silkscreen for BuxBlitz */
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00d4ff; /* Bright cyan glow */
+}
+
+.content p {
+    font-size: 16px; /* Smaller font for mobile readability */
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* MailerLite Form Styling */
+.mailerlite-form {
+    margin-bottom: 20px;
+}
+
+.ml-embedded {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.ml-form-embedContainer {
+    background-color: #1a1a2e; /* Dark background to match theme */
+    border-radius: 15px;
+    padding: 15px; /* Reduced padding for mobile */
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.5); /* Neon glow */
+}
+
+.ml-form-embedBody {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.ml-form-embedContent h4 {
+    font-size: 18px; /* Smaller title for mobile */
+    color: #ff007a; /* Bright pink for title */
+    text-shadow: 0 0 10px #ff007a;
+    margin-bottom: 10px;
+}
+
+.ml-form-fieldRow input {
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px; /* Smaller font for mobile input */
+    width: 100%;
+    max-width: 250px;
+    background-color: #16213e;
+    color: #fff;
+    box-shadow: inset 0 0 5px rgba(0, 212, 255, 0.3);
+    margin: 0 auto; /* Center on mobile */
+}
+
+.ml-form-fieldRow input::placeholder {
+    color: #aaa;
+    font-size: 14px; /* Match input font size */
+}
+
+.ml-form-fieldRow input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00d4ff; /* Neon glow on focus */
+}
+
+.ml-form-embedSubmit button.primary {
+    background-color: #00d4ff; /* Bright cyan for button */
+    color: #16213e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px; /* Smaller font for mobile button */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px #00d4ff; /* Neon glow */
+    min-width: 120px; /* Ensure touch-friendly size */
+    margin: 10px auto; /* Center on mobile */
+}
+
+.ml-form-embedSubmit button.primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00d4ff;
+}
+
+.ml-form-embedSubmit button.loading {
+    display: none !important; /* Hide loading state if not needed */
+}
+
+/* Countdown Timer */
+.countdown {
+    font-size: 16px; /* Smaller font for mobile */
+    margin-top: 15px;
+    color: #e94560; /* Vibrant pink for countdown */
+    text-shadow: 0 0 10px #e94560;
+}
+
+#countdown-timer {
+    font-weight: bold;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 15px;
+    font-size: 14px; /* Smaller font for mobile */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px; /* Touch-friendly padding */
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.social-links a:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+/* Ad Styling */
+.ad-splash {
+    margin: 15px 0; /* Reduced margin for mobile */
+    text-align: center;
+    background-color: rgba(22, 33, 62, 0.8); /* Semi-transparent dark background */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5); /* Subtle neon glow */
+    max-width: 300px; /* Mobile-friendly ad size */
+    margin: 0 auto;
+}
+
+/* Responsive Design - Enhanced for Mobile */
+@media (max-width: 768px) {
+    .splash-container {
+        padding: 15px;
+        margin: 10px;
+        width: 95%; /* Slightly wider for mobile */
+    }
+
+    .content {
+        padding: 15px 10px; /* Reduced padding for mobile */
+    }
+
+    .logo {
+        font-size: 36px; /* Smaller logo for mobile */
+    }
+
+    .content h2 {
+        font-size: 24px; /* Smaller heading for mobile */
+    }
+
+    .content p {
+        font-size: 14px; /* Even smaller paragraph for mobile readability */
+    }
+
+    .mailerlite-form {
+        padding: 10px;
+    }
+
+    .ml-form-embedContainer {
+        padding: 10px;
+    }
+
+    .ml-form-embedContent h4 {
+        font-size: 16px; /* Smaller title for mobile */
+    }
+
+    .ml-form-fieldRow input {
+        padding: 8px; /* Reduced padding for mobile input */
+        max-width: 200px; /* Slightly smaller input on mobile */
+    }
+
+    .ml-form-embedSubmit button.primary {
+        padding: 8px 15px; /* Reduced padding for mobile button */
+        font-size: 12px; /* Even smaller button text */
+        min-width: 100px; /* Ensure touch-friendly size */
+    }
+
+    .countdown {
+        font-size: 14px; /* Smaller countdown for mobile */
+    }
+
+    .social-links {
+        flex-direction: column; /* Stack social links vertically on mobile */
+        gap: 5px;
+    }
+
+    .social-links a {
+        padding: 5px; /* Reduced padding for mobile links */
+    }
+
+    .ad-splash {
+        max-width: 250px; /* Smaller ad on mobile */
+    }
+}
+
+/* Extra Small Screens (e.g., < 480px) for Ultra-Mobile Optimization */
+@media (max-width: 480px) {
+    .splash-container {
+        width: 100%; /* Full width for very small screens */
+        border-radius: 0; /* Remove rounding for full-width */
+        margin: 0;
+    }
+
+    .logo {
+        font-size: 30px; /* Even smaller logo for ultra-mobile */
+    }
+
+    .content h2 {
+        font-size: 20px; /* Smaller heading for ultra-mobile */
+    }
+
+    .content p {
+        font-size: 12px; /* Smaller paragraph for ultra-mobile readability */
+    }
+
+    .ml-form-fieldRow input {
+        max-width: 180px; /* Smaller input for ultra-mobile */
+        padding: 6px; /* Reduced padding for ultra-mobile input */
+    }
+
+    .ml-form-embedSubmit button.primary {
+        padding: 6px 12px; /* Reduced padding for ultra-mobile button */
+        font-size: 10px; /* Smaller button text for ultra-mobile */
+        min-width: 90px; /* Minimum touch-friendly size */
+    }
+
+    .countdown {
+        font-size: 12px; /* Smaller countdown for ultra-mobile */
+    }
+
+    .social-links a {
+        padding: 3px; /* Reduced padding for ultra-mobile links */
+    }
+
+    .ad-splash {
+        max-width: 200px; /* Smaller ad for ultra-mobile */
+        padding: 8px; /* Reduced padding for ultra-mobile ad */
+    }
+}
