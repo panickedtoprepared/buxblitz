@@ -68,3 +68,13 @@ if (emailInput) {
         emailInput.focus();
     });
 }
+
+// Handle Privacy Link Visibility (Optional, for mobile optimization)
+const privacyLink = document.querySelector('.privacy-link');
+if (privacyLink) {
+    // Ensure privacy link is visible and touch-friendly on mobile
+    privacyLink.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // Prevent default touch behavior if needed
+        window.location.href = 'privacy.html'; // Navigate to privacy policy on touch
+    });
+}

@@ -7,15 +7,64 @@
 
 /* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #16213e; /* Dark background, matching Roblox themes */
-    color: #d6e945;
-    line-height: 1.2;
+    color: #fff;
+    line-height: 1.6;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header (Fixed, matching index.html) */
+header {
+    background-color: #0f3460;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 212, 255, 0.3); /* Neon effect */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    color: #ff007a; /* Bright pink for BuxBlitz logo */
+    text-shadow: 0 0 10px #ff007a;
+    font-family: 'Silkscreen', cursive; /* Use Silkscreen for BuxBlitz */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff;
 }
 
 /* Splash Container */
@@ -26,21 +75,13 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.8); /* Neon glow */
     max-width: 800px;
-    width: 30%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 100px auto 20px; /* Adjusted margin to account for fixed header and space for footer */
 }
 
 /* Content Styling */
 .content {
     padding: 20px 15px; /* Reduced padding for mobile */
-}
-
-.logo {
-    font-size: 48px;
-    color: #ff007a; /* Bright pink for BuxBlitz logo */
-    text-shadow: 0 0 15px #ff007a; /* Neon glow */
-    font-family: 'Silkscreen'; /* Use Silkscreen for BuxBlitz */
-    margin-bottom: 10px;
 }
 
 .content h2 {
@@ -130,6 +171,24 @@ body {
     display: none !important; /* Hide loading state if not needed */
 }
 
+/* Privacy Link Styling */
+.privacy-link {
+    font-size: 14px; /* Smaller font for mobile */
+    margin-top: 10px;
+    color: #fff;
+}
+
+.privacy-link a {
+    color: #e94560; /* Vibrant pink for link */
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.privacy-link a:hover {
+    color: #ff007a;
+    text-shadow: 0 0 10px #ff007a;
+}
+
 /* Countdown Timer */
 .countdown {
     font-size: 16px; /* Smaller font for mobile */
@@ -176,20 +235,63 @@ body {
     margin: 0 auto;
 }
 
+/* Site Footer */
+.site-footer {
+    background-color: #16213e;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 212, 255, 0.3);
+    width: 100%;
+}
+
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-footer p {
+    font-size: 12px; /* Smaller font for mobile */
+}
+
+.site-footer a {
+    color: #00d4ff; /* Bright cyan for links */
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.site-footer a:hover {
+    color: #e94560;
+    text-shadow: 0 0 10px #e94560;
+}
+
 /* Responsive Design - Enhanced for Mobile */
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin: 15px 0;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    .logo {
+        font-size: 24px; /* Smaller logo for mobile */
+    }
+
     .splash-container {
         padding: 15px;
-        margin: 10px;
+        margin: 60px auto 20px; /* Reduced margin to account for mobile header */
         width: 95%; /* Slightly wider for mobile */
     }
 
     .content {
         padding: 15px 10px; /* Reduced padding for mobile */
-    }
-
-    .logo {
-        font-size: 36px; /* Smaller logo for mobile */
     }
 
     .content h2 {
@@ -213,8 +315,8 @@ body {
     }
 
     .ml-form-fieldRow input {
-        padding: 8px; /* Reduced padding for mobile input */
         max-width: 200px; /* Slightly smaller input on mobile */
+        padding: 8px; /* Reduced padding for mobile input */
     }
 
     .ml-form-embedSubmit button.primary {
@@ -236,6 +338,18 @@ body {
         padding: 5px; /* Reduced padding for mobile links */
     }
 
+    .privacy-link {
+        font-size: 12px; /* Smaller privacy link for mobile */
+    }
+
+    .site-footer .container {
+        padding: 0 10px; /* Reduced padding for mobile footer */
+    }
+
+    .site-footer p {
+        font-size: 10px; /* Smaller footer text for mobile */
+    }
+
     .ad-splash {
         max-width: 250px; /* Smaller ad on mobile */
     }
@@ -243,14 +357,23 @@ body {
 
 /* Extra Small Screens (e.g., < 480px) for Ultra-Mobile Optimization */
 @media (max-width: 480px) {
-    .splash-container {
-        width: 100%; /* Full width for very small screens */
-        border-radius: 0; /* Remove rounding for full-width */
+    .logo {
+        font-size: 20px; /* Even smaller logo for ultra-mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav ul li {
         margin: 0;
     }
 
-    .logo {
-        font-size: 30px; /* Even smaller logo for ultra-mobile */
+    .splash-container {
+        width: 100%; /* Full width for very small screens */
+        border-radius: 0; /* Remove rounding for full-width */
+        margin: 60px auto 10px; /* Adjusted margin for ultra-mobile */
     }
 
     .content h2 {
@@ -278,6 +401,18 @@ body {
 
     .social-links a {
         padding: 3px; /* Reduced padding for ultra-mobile links */
+    }
+
+    .privacy-link {
+        font-size: 10px; /* Smaller privacy link for ultra-mobile */
+    }
+
+    .site-footer .container {
+        padding: 0 5px; /* Reduced padding for ultra-mobile footer */
+    }
+
+    .site-footer p {
+        font-size: 8px; /* Smaller footer text for ultra-mobile */
     }
 
     .ad-splash {
