@@ -22,7 +22,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+/* Header (Fixed, matching coming-soon.html and index.html) */
 header {
     background-color: #0f3460;
     padding: 20px 0;
@@ -30,7 +30,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 212, 255, 0.3); /* Neon effect */
 }
 
 header .container {
@@ -94,6 +94,13 @@ main {
     margin: 20px 0 10px;
 }
 
+.privacy-policy h4 {
+    font-size: 20px;
+    color: #e94560; /* Vibrant pink for subheadings */
+    text-shadow: 0 0 8px #e94560;
+    margin: 15px 0 5px;
+}
+
 .privacy-policy p, .privacy-policy ul {
     font-size: 16px;
     margin-bottom: 15px;
@@ -115,25 +122,32 @@ main {
     text-shadow: 0 0 10px #ff007a;
 }
 
-/* Footer */
-footer {
+/* Site Footer */
+.site-footer {
     background-color: #16213e;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
     box-shadow: 0 -2px 10px rgba(0, 212, 255, 0.3);
+    width: 100%;
 }
 
-footer p {
-    font-size: 14px;
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-footer a {
-    color: #00d4ff;
+.site-footer p {
+    font-size: 12px; /* Smaller font for mobile */
+}
+
+.site-footer a {
+    color: #00d4ff; /* Bright cyan for links */
     text-decoration: none;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
-footer a:hover {
+.site-footer a:hover {
     color: #e94560;
     text-shadow: 0 0 10px #e94560;
 }
@@ -154,7 +168,7 @@ footer a:hover {
     }
 
     .logo {
-        font-size: 24px;
+        font-size: 24px; /* Smaller logo for mobile */
     }
 
     main {
@@ -174,6 +188,10 @@ footer a:hover {
         font-size: 20px;
     }
 
+    .privacy-policy h4 {
+        font-size: 18px;
+    }
+
     .privacy-policy p, .privacy-policy ul {
         font-size: 14px;
     }
@@ -181,17 +199,25 @@ footer a:hover {
     nav ul li a {
         font-size: 16px;
     }
+
+    .site-footer .container {
+        padding: 0 10px; /* Reduced padding for mobile footer */
+    }
+
+    .site-footer p {
+        font-size: 10px; /* Smaller footer text for mobile */
+    }
 }
 
 /* Extra Small Screens (e.g., < 480px) for Ultra-Mobile Optimization */
 @media (max-width: 480px) {
     .logo {
-        font-size: 20px;
+        font-size: 20px; /* Even smaller logo for ultra-mobile */
     }
 
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
     }
 
     nav ul li {
@@ -206,7 +232,19 @@ footer a:hover {
         font-size: 18px;
     }
 
+    .privacy-policy h4 {
+        font-size: 16px;
+    }
+
     .privacy-policy p, .privacy-policy ul {
         font-size: 12px;
+    }
+
+    .site-footer .container {
+        padding: 0 5px; /* Reduced padding for ultra-mobile footer */
+    }
+
+    .site-footer p {
+        font-size: 8px; /* Smaller footer text for ultra-mobile */
     }
 }
